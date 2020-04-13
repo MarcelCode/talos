@@ -4,11 +4,11 @@ def test_scan():
 
     import talos
 
-    from keras.losses import binary_crossentropy
-    from keras.optimizers import Adam
-    from keras.activations import relu, elu
-    from keras.layers import Dense
-    from keras.models import Sequential
+    from tensorflow.keras.losses import binary_crossentropy
+    from tensorflow.keras.optimizers import Adam
+    from tensorflow.keras.activations import relu, elu
+    from tensorflow.keras.layers import Dense
+    from tensorflow.keras.models import Sequential
 
     p = {'activation': [relu, elu],
          'optimizer': ['Nadam', Adam],

@@ -1,11 +1,9 @@
-from keras.callbacks import EarlyStopping
+from tensorflow.keras.callbacks import EarlyStopping
 
 
 def early_stopper(epochs=None,
                   monitor='val_loss',
-                  mode='moderate',
-                  min_delta=None,
-                  patience=None):
+                  mode='moderate'):
 
     '''EARLY STOP CALLBACK
 

@@ -80,13 +80,11 @@ def titanic():
 def iris():
 
     import pandas as pd
-    from keras.utils import to_categorical
+    from tensorflow.keras.utils import to_categorical
     base = 'https://raw.githubusercontent.com/autonomio/datasets/master/autonomio-datasets/'
     df = pd.read_csv(base + 'iris.csv')
     df['species'] = df['species'].factorize()[0]
     df = df.sample(len(df))
-    y = to_categorical(df['species'])
-    x = df.iloc[:, :-1].values
 
     y = to_categorical(df['species'])
     x = df.iloc[:, :-1].values
@@ -139,7 +137,7 @@ def mnist():
 
     x_train, y_train, x_val, y_val'''
 
-    import keras
+    from tensorflow import keras
     import numpy as np
 
     # the data, split between train and test sets

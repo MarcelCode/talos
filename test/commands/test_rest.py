@@ -38,8 +38,8 @@ def test_rest(scan_object):
                talos.utils.metrics.rmse,
                talos.utils.metrics.rmsle]
 
-    from keras.models import Sequential
-    from keras.layers import Dense
+    from tensorflow.keras.models import Sequential
+    from tensorflow.keras.layers import Dense
 
     print('\n ...callbacks and metrics... \n')
 
