@@ -15,8 +15,13 @@ def scan_round(self):
     start = time.time()
 
     # fit the model
-    from ..model.ingest_model import ingest_model
-    self.model_history, self.round_model = ingest_model(self)
+    from ..model.ingest_model import ingest_model, ingest_tpu_model
+
+    if self.strategy:
+        self.model_history, self.round_model = ingest_tpu_model(self)
+    else:
+        self.model_history, self.round_model = ingest_model(self)
+
     self.round_history.append(self.model_history.history)
 
     # handle logging of results

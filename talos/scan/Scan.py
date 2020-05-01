@@ -133,6 +133,7 @@ class Scan:
                  params,
                  model,
                  experiment_name,
+                 strategy=None,
                  x_val=None,
                  y_val=None,
                  val_split=.3,
@@ -162,6 +163,9 @@ class Scan:
         self.x_val = x_val
         self.y_val = y_val
         self.val_split = val_split
+
+        # strategy
+        self.strategy = strategy
 
         # randomness
         self.random_method = random_method
